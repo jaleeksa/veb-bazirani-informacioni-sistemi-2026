@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2026 at 11:27 PM
+-- Generation Time: Apr 26, 2026 at 12:24 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -803,20 +803,21 @@ CREATE TABLE `trainings` (
   `title` varchar(50) NOT NULL,
   `description` text NOT NULL,
   `price` decimal(10,2) NOT NULL,
-  `status` varchar(50) NOT NULL
+  `status` varchar(50) NOT NULL,
+  `deleted_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `trainings`
 --
 
-INSERT INTO `trainings` (`training_id`, `title`, `description`, `price`, `status`) VALUES
-(1, 'Dnevni trening', 'Članarina za jednodnevni trening u teretani koja omogućava pristup svim dostupnim spravama i prostorijama u okviru jednog dana korišćenja.', 500.00, 'aktivan'),
-(2, 'Polumesečna članarina', 'Polumesečna članarina koja omogućava neograničen pristup teretani u trajanju od 15 dana, uz korišćenje svih sprava i trening zona.', 2500.00, 'aktivan'),
-(3, 'Mesečna članarina do 15h', 'Mesečna članarina sa ograničenim terminom korišćenja do 15h, koja omogućava neograničen pristup teretani u okviru jutarnjih i ranih popodnevnih termina tokom 30 dana.', 3000.00, 'aktivan'),
-(4, 'Mesečna članarina', 'Mesečna članarina koja omogućava neograničen pristup teretani tokom 30 dana, uz korišćenje svih sprava i trening zona.', 3400.00, 'aktivan'),
-(5, 'Personalni treninzi', 'Personalni treninzi su individualno prilagođeni treninzi uz stalni nadzor trenera, fokusirani na tvoje ciljeve, pravilnu tehniku izvođenja vežbi i maksimalan napredak kroz personalizovan program.', 11700.00, 'aktivan'),
-(6, 'Studentska članarina', 'Studentska članarina je posebna povoljna članarina namenjena studentima, koja omogućava neograničen pristup teretani tokom određenog perioda, uz korišćenje svih sprava i trening zona u cilju održavanja forme i zdravog načina života.', 2600.00, 'aktivan');
+INSERT INTO `trainings` (`training_id`, `title`, `description`, `price`, `status`, `deleted_at`) VALUES
+(1, 'Dnevni trening', 'Članarina za jednodnevni trening u teretani koja omogućava pristup svim dostupnim spravama i prostorijama u okviru jednog dana korišćenja.', 500.00, 'aktivan', NULL),
+(2, 'Polumesečna članarina', 'Polumesečna članarina koja omogućava neograničen pristup teretani u trajanju od 15 dana, uz korišćenje svih sprava i trening zona.', 2500.00, 'aktivan', NULL),
+(3, 'Mesečna članarina do 15h', 'Mesečna članarina sa ograničenim terminom korišćenja do 15h, koja omogućava neograničen pristup teretani u okviru jutarnjih i ranih popodnevnih termina tokom 30 dana.', 3000.00, 'aktivan', '2026-04-25'),
+(4, 'Mesečna članarina', 'Mesečna članarina koja omogućava neograničen pristup teretani tokom 30 dana, uz korišćenje svih sprava i trening zona.', 3400.00, 'aktivan', NULL),
+(5, 'Personalni treninzi', 'Personalni treninzi su individualno prilagođeni treninzi uz stalni nadzor trenera, fokusirani na tvoje ciljeve, pravilnu tehniku izvođenja vežbi i maksimalan napredak kroz personalizovan program.', 11700.00, 'aktivan', NULL),
+(6, 'Studentska članarina', 'Studentska članarina je posebna povoljna članarina namenjena studentima, koja omogućava neograničen pristup teretani tokom određenog perioda, uz korišćenje svih sprava i trening zona u cilju održavanja forme i zdravog načina života.', 2600.00, 'aktivan', NULL);
 
 -- --------------------------------------------------------
 
@@ -908,7 +909,8 @@ ALTER TABLE `memberships`
 -- Indexes for table `trainings`
 --
 ALTER TABLE `trainings`
-  ADD PRIMARY KEY (`training_id`);
+  ADD PRIMARY KEY (`training_id`),
+  ADD KEY `idx_deleted_at` (`deleted_at`);
 
 --
 -- Indexes for table `users`
@@ -924,7 +926,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `memberships`
 --
 ALTER TABLE `memberships`
-  MODIFY `membership_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1024;
+  MODIFY `membership_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=755;
 
 --
 -- AUTO_INCREMENT for table `trainings`

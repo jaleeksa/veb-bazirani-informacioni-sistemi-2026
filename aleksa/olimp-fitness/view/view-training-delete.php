@@ -7,7 +7,7 @@
 		<center>
 			<br><br><br>
 			<form method="post">
-				Da li želite da obrišete izabranu sliku?
+				Da li želite da obrišete izabrani plan treninga?
 				
 				<input type="hidden" value="<?= $_id ?>">
 				<button name="confirmation" value="1">Da</button>

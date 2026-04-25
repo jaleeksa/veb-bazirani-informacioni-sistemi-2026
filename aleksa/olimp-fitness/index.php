@@ -72,6 +72,7 @@ db_close($_db);
 
 /* Pogled */
 include_once(DIR_VIEW . 'page-header.php');
+include_once(DIR_VIEW . 'page-body.php');
 include_once(DIR_VIEW . 'page-footer.php');
 
 	
