@@ -74,7 +74,6 @@ else {
                     WHERE `deleted_at` IS NOT NULL
                     ORDER BY `deleted_at` DESC, training_id DESC";
             
-            $_output['page-title'] = 'OBRISANI TRENINZI';
             $_output['show_deleted_mode'] = true;
         } else {
             // Normalan prikaz - samo aktivni treninzi
@@ -84,7 +83,6 @@ else {
                     ORDER BY training_id ASC";
             
             $_output['show_deleted_mode'] = false;
-            $_output['page-title'] = 'TRENINZI';        // ← OVO JE BILO NEDOSTAJALO
         }
 
         $result = mysqli_query($_db, $sql);

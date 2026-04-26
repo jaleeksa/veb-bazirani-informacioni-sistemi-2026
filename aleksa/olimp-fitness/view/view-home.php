@@ -17,7 +17,7 @@
                 transformisati svoje telo i um, bilo da ste fitness entuzijasta, početnik ili iskusni
                 sportista.
             </p>
-            <a href="<?= FILE_INDEX?>?page=about_us">Šta nas izdvaja?</a>
+            <a href="<?= FILE_INDEX ?>?page=about_us"><button>ŠTA NAS IZDVAJA?</button></a>
         </div>
     </div>
 
@@ -28,20 +28,16 @@
         <table>
             <tr>
                 <td class="naslovna-kartice">
-                    <img src="./public/images/naslovna-treninzi-individualni.webp" alt="Treninzi - Individualni">
-                    <h3>INDIVIDUALNI</h3>
-                    <p>Kod individualnih (personalnih) treninga, trener je fokusiran samo na jednog klijenta.
-                        Treninzi su 1 na 1, instruktor je uz vežbača tokom vežbanja, daje mu smernice vezano za
-                        ishranu, izvođenje vežbi i ispravlja po potrebi.</p>
-                    <a href="<?= FILE_INDEX?>?page=training"><button>PROČITAJTE VIŠE...</button></a>
+                    <img src="./public/images/4.webp" alt="Treninzi - Mesečna članarina">
+                    <h3>MESEČNA ČLANARINA</h3>
+                    <p>Mesečna članarina koja omogućava neograničen pristup teretani tokom 30 dana, uz korišćenje svih sprava i trening zona.</p>
+                    <a href="<?= FILE_INDEX ?>?page=training"><button>PROČITAJTE VIŠE</button></a>
                 </td>
                 <td class="naslovna-kartice">
-                    <img src="./public/images/naslovna-treninzi-grupni.webp" alt="Treninzi - Grupni">
-                    <h3>GRUPNI</h3>
-                    <p>Grupni treninzi podrazumevaju vežbanje pod nadzorom trenera koji nakon davanja
-                        instrukcija ostavlja slobodu da se vežba samostalno. Ovakav vid treninga
-                        preporučujemo ukoliko želite da vežbate u društvu, ali i da imate pažnju trenera.</p>
-                    <a href="<?= FILE_INDEX?>?page=training"><button>PROČITAJTE VIŠE...</button></a>
+                    <img src="./public/images/6.webp" alt="Treninzi - Studentska članarina">
+                    <h3>STUDENTSKA ČLANARINA</h3>
+                    <p>Studentska članarina je posebna povoljna članarina namenjena studentima, koja omogućava neograničen pristup teretani ...</p>
+                    <a href="<?= FILE_INDEX ?>?page=training"><button>PROČITAJTE VIŠE</button></a>
                 </td>
             </tr>
         </table>
@@ -55,6 +51,6 @@
             <li><i class="fa-solid fa-phone-volume"></i> <a href="tel:+38118208300">018/208 300</a></li>
             <li><i class="fa-solid fa-fax"></i> <a href="tel:+38118208301">018/208 301</a></li>
         </ul>
-        <a href="./index.php?model=contact">POŠALJITE NAM PORUKU</a>
+        <a href="<?= FILE_INDEX ?>?page=contact"><button>POŠALJITE NAM PORUKU</button></a>
     </div>
 </div>

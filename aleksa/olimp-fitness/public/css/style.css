@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Verdana' !important;
+    font-family: 'Montserrat' !important;
 }
 
 body a {
@@ -12,6 +12,21 @@ body a {
 body a:hover {
     text-decoration: underline;
     color: #4ba05b;
+}
+
+button {
+    padding: 1em 3em;
+    background-color: #4ba05b;
+    color: white;
+    border: 2px solid #4ba05b;
+    border-radius: 15px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+button:hover {
+    background-color: #397d46;
 }
 
 /* ------------------------ HEADER ------------------------ */
@@ -122,21 +137,6 @@ footer a img {
     height: 15em;
 }
 
-#naslovna .naslovna-treninzi .naslovna-kartice button {
-    padding: 1em 3em;
-    background-color: #4ba05b;
-    color: white;
-    border: 2px solid #4ba05b;
-    border-radius: 15px;
-    font-family: 'Verdana';
-    font-weight: bold;
-    transition: 0.25s;
-}
-
-#naslovna .naslovna-treninzi .naslovna-kartice button:hover {
-    background-color: #397d46;
-}
-
 #naslovna .naslovna-kontakt {
     background-image: url('../images/banner-naslovna-kontakt.webp');
     background-size: cover;
@@ -157,6 +157,27 @@ footer a img {
 
 #naslovna .naslovna-kontakt ul {
     list-style-type: none;
+}
+
+/* ------------------------ O NAMA ------------------------ */
+
+#o-nama .banner {
+    background: url('../images/banner-o-nama.webp');
+    background-size: cover;
+    height: 25em;
+    margin-top: -4.7em;
+    color: white;
+    text-align: center;
+}
+
+#o-nama .banner h1 {
+    font-size: 7em;
+    padding: 1.1em;
+}
+
+#o-nama .o-nama-sadrzaj {
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 /* ----------------------- TRENINZI ----------------------- */
@@ -221,16 +242,14 @@ footer a img {
 }
 
 #treninzi #bmi-kalkulator input {
-    width: 10em;
-    padding: 12px;
+    background-color: white;
+    padding: 1em 3em;
+    margin-bottom: 3em;
     border: 1px solid #4ba05b;
     border-radius: 15px;
-    box-sizing: border-box;
-    margin: 6px auto 16px auto;
-    resize: vertical;
-    font-family: 'Verdana';
+    cursor: pointer;
+    font-family: 'Montserrat';
     transition: 0.25s;
-    display: block;
 }
 
 #treninzi #bmi-kalkulator input:focus {
@@ -238,18 +257,18 @@ footer a img {
 }
 
 #treninzi #bmi-kalkulator button {
-    background-color: white;
     padding: 1em 3em;
-    margin-bottom: 3em;
-    border: 1px solid #4ba05b;
+    background-color: #4ba05b;
+    color: white;
+    border: 2px solid #4ba05b;
     border-radius: 15px;
-    cursor: pointer;
-    font-family: 'Verdana';
+    font-family: 'Montserrat';
+    font-weight: bold;
     transition: 0.25s;
 }
 
 #treninzi #bmi-kalkulator button:hover {
-    background-color: #d2fad9;
+    background-color: #397d46;
 }
 
 #trening-detalji .banner {
@@ -264,29 +283,28 @@ footer a img {
 #trening-detalji .banner h1 {
     font-size: 7em;
     padding: 1.1em;
+    text-transform: uppercase;
 }
 
 #trening-detalji #trening-detalji-info {
-    padding-top: 10rem; 
-    padding-bottom: 10rem;
+    padding: 40px 0;
     text-align: center;
 
 }
 
 #trening-detalji #trening-detalji-info button {
-    background-color: #d2fad9;
     padding: 1em 3em;
-    margin-bottom: 3em;
-    border: 1px solid #4ba05b;
+    background-color: #4ba05b;
+    color: white;
+    border: 2px solid #4ba05b;
     border-radius: 15px;
-    cursor: pointer;
-    font-family: 'Verdana';
+    font-family: 'Montserrat';
+    font-weight: bold;
     transition: 0.25s;
 }
 
 #trening-detalji #trening-detalji-info button:hover {
-    background-color: #4ba05b;
-    color: white;
+    background-color: #397d46;
 }
 
 #trening-detalji #trening-detalji-info input, #trening-detalji #trening-detalji-info textarea {
@@ -296,7 +314,7 @@ footer a img {
     border: 1px solid #4ba05b;
     border-radius: 15px;
     cursor: pointer;
-    font-family: 'Verdana';
+    font-family: 'Montserrat';
     transition: 0.25s;
 }
 
@@ -332,6 +350,12 @@ footer a img {
 
 #trening-detalji-info a:hover{
     color: #4ba05b; 
+}
+
+#trening-detalji-info training-article img {
+    height: auto;
+    width: 35%;
+    border-radius: 15px;
 }
 
 /* ------------------------ O NAMA ------------------------ */
@@ -380,7 +404,7 @@ footer a img {
 }
 
 #kontakt #kontakt-info {
-    padding: 1em 15em;
+    padding: 50px 15em 1em;
     text-align: center;
 }
 
@@ -397,14 +421,12 @@ footer a img {
 #kontakt-forma input[type=text],
 select,
 textarea {
-    width: 100%;
-    padding: 12px;
+    background-color: white;
+    padding: 1em 3em;
+    margin-bottom: 3em;
     border: 1px solid #4ba05b;
     border-radius: 15px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
+    cursor: pointer;
     font-family: 'Montserrat';
     transition: 0.25s;
 }
@@ -415,21 +437,22 @@ textarea:focus {
 }
 
 #kontakt-forma button {
-    background-color: white;
     padding: 1em 3em;
-    border: 1px solid #4ba05b;
+    background-color: #4ba05b;
+    color: white;
+    border: 2px solid #4ba05b;
     border-radius: 15px;
-    cursor: pointer;
     font-family: 'Montserrat';
+    font-weight: bold;
     transition: 0.25s;
+}
+
+#kontakt-forma button:hover {
+    background-color: #397d46;
 }
 
 #kontakt-forma textarea{
     height: 10rem;
-}
-
-#kontakt-forma button:hover {
-    background-color: #d2fad9;
 }
 
 #kontakt #mapa iframe {
@@ -464,7 +487,7 @@ textarea:focus {
 }
 
 #greska404 #greska404-info {
-    padding: 6em;
+    padding: 50px 0 40px;
     text-align: center;
 }
 
@@ -506,15 +529,23 @@ textarea:focus {
 }
 
 #prijava #prijava-info {
-    padding: 6em;
+    padding: 50px 0 40px;
     text-align: center;
 }
 
 #prijava #prijava-info input {
-    padding: 0.5em;
-    border-radius: 15px;
-    background-color: #d2fad9;
+    background-color: white;
+    padding: 1em 3em;
+    margin-bottom: 3em;
     border: 1px solid #4ba05b;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    transition: 0.25s;
+}
+
+#prijava #prijava-info input:focus {
+    background-color: #d2fad9;
 }
 
 #prijava #prijava-info button {
@@ -523,11 +554,32 @@ textarea:focus {
     color: white;
     border: 2px solid #4ba05b;
     border-radius: 15px;
-    font-family: 'Verdana';
+    font-family: 'Montserrat';
     font-weight: bold;
     transition: 0.25s;
 }
 
 #prijava #prijava-info button:hover {
     background-color: #397d46;
+}
+
+/* ---------------------- STATISTIKA ---------------------- */
+
+#stats-container .banner {
+    background: url('../images/banner-naslovna-2.webp');
+    background-size: cover;
+    height: 25em;
+    margin-top: -4.7em;
+    color: white;
+    text-align: center;
+}
+
+#stats-container .banner h1 {
+    font-size: 7em;
+    padding: 1.1em;
+}
+
+#stats-container .prikaz {
+    width: 50%;
+    margin: 0 auto 40px;
 }

@@ -14,22 +14,22 @@
 		</center>
 		<form method="post" enctype="multipart/form-data">
 
-			<label>Naslov</label>
+			<label>Naslov</label><br>
 			<input type="text" name="title" value="<?= $training_title ?? '' ?>">
-
-			<label>Opis</label>
+			<br>
+			<label>Opis</label><br>
 			<input type="text" name="description" value="<?= $training_description ?? '' ?>">
-
-			<label>Cena</label>
+			<br>
+			<label>Cena</label><br>
 			<input type="text" name="price" value="<?= $training_price ?? '' ?>">
-
-			<label>Fajl</label>
+			<br>
+			<label>Slika</label><br>
 			<label for="training_file" class="moje-dugme">
     			<i class="fa fa-folder-open"></i> Izaberi sliku...
 			</label>
 			<input type="file" id="training_file" name="training_file" style="display:none;">
-
-			<button>Pošalji</button>
+			<br><br><br>
+			<button>IZMENITE</button>
 
 		</form>
 		</center>

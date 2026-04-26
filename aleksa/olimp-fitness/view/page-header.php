@@ -24,9 +24,9 @@
             <?php endif; ?>         
 
             <?php if (auth_is_user() || auth_is_admin()): ?>
-                <a href="<?= FILE_INDEX ?>?page=login&action=logout">Odjavi se</a> (<?= $_SESSION['username'] ?>)
+                <a href="<?= FILE_INDEX ?>?page=login&action=logout">Odjavite se</a> (<?= $_SESSION['username'] ?>)
             <?php else: ?>
-                <a href="<?= FILE_INDEX ?>?page=login">Prijavi se</a>
+                <a href="<?= FILE_INDEX ?>?page=login">Prijavite se</a>
                 <?php $_SESSION['username'] = '' ?> 
                                 
             <?php endif; ?>

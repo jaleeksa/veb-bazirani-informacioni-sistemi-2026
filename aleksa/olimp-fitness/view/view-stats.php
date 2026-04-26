@@ -1,19 +1,19 @@
-<div id="stats-container" style="padding: 2rem; background: white;">
-    <div class="banner" style="text-align: center; margin-bottom: 2rem;">
-        <h1>STATISTIKA PRODAJE ČLANARINA</h1>
+<div id="stats-container">
+    <div class="banner">
+        <h1>STATISTIKA ČLANARINA</h1>
     </div>
 
     <div style="text-align: center; margin-bottom: 2rem; background: #f4f4f4; padding: 1rem; border-radius: 8px;">
         <label>Od: </label>
         <input type="date" id="dateFrom" value="<?= date('Y-m-01') ?>">
         
-        <label> Do: </label>
+        <label style="margin-left: 20px;">Do: </label>
         <input type="date" id="dateTo" value="<?= date('Y-m-t') ?>">
         
-        <button id="btnFilter" style="padding: 5px 15px; cursor: pointer;">Prikaži</button>
+        <button id="btnFilter" style="margin-left: 20px;">PRIKAŽITE</button>
     </div>
 
-    <div style="width: 90%; margin: 0 auto;">
+    <div class="prikaz">
         <canvas id="myChart"></canvas>
     </div>
 </div>

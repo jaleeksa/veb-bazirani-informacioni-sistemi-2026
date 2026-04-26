@@ -20,13 +20,13 @@
                 Vrati se na <a href="<?= FILE_INDEX ?>">početnu stranu.</a>
             <?php else: ?>
             <form method="post">
-                <label>Ime:</label>
-                <input type="text" name="name" value="<?= $_POST['name'] ?? '' ?>">
-                <label>Email:</label>
-                <input type="text" name="email" value="<?= $_POST['email'] ?? '' ?>">
-                <label>Poruka:</label>
-                <textarea name="message"><?= $_POST['message'] ?? '' ?></textarea>
-                <button id="posalji-formu">Pošalji</button>
+                <label>Ime i Prezime</label><br>
+                <input type="text" name="name" value="<?= $_POST['name'] ?? '' ?>"><br>
+                <label>Email adresa</label><br>
+                <input type="text" name="email" value="<?= $_POST['email'] ?? '' ?>"><br>
+                <label>Poruka</label><br>
+                <textarea name="message"><?= $_POST['message'] ?? '' ?></textarea><br>
+                <button id="posalji-formu">POŠALJITE NAM PORUKU</button>
             </form>
             <?php endif; ?>
     </div>

@@ -1,4 +1,7 @@
 <div id="treninzi">
+	<div class="banner">
+		<h1>TRENINZI</h1>
+	</div>
 
 	<div class="o-treninzima">
 		Trening ima mnoge pozitivne efekte na fizičko i mentalno zdravlje. Redovan fizički trening poboljšava
@@ -54,22 +57,22 @@
 
 
 	<?php if (auth_is_admin() && isset($_output['deleted_count']) && $_output['deleted_count'] > 0): ?>
-    <div style="background-color: #fff3cd; border: 1px solid #ffeaa7; padding: 12px; border-radius: 8px; text-align: center; margin: 20px auto; max-width: 600px;">
-        <strong style="color: #856404;">
-            Obrisano treninga: <?= $_output['deleted_count'] ?>
-        </strong> 
-        | <a href="?page=training&show_deleted=1" style="color: #856404;">Prikaži obrisane treninge</a>
-    </div>
+		<div style="background-color: #fff3cd; border: 1px solid #ffeaa7; padding: 12px; border-radius: 8px; text-align: center; margin: 20px auto; max-width: 600px;">
+			<strong style="color: #856404;">
+				Obrisano treninga: <?= $_output['deleted_count'] ?>
+			</strong>
+			| <a href="?page=training&show_deleted=1" style="color: #856404;">Prikaži obrisane treninge</a>
+		</div>
 	<?php endif; ?>
 
 	<div class="izbor">
 		<div class="kartica">
 			<?php if (auth_is_admin()): ?>
-				<a href="<?= FILE_INDEX ?>?page=<?= $_page ?>&action=submit">DODAJ NOVI TRENING</a><br><br>
+				<a href="<?= FILE_INDEX ?>?page=<?= $_page ?>&action=submit"><button>DODAJ NOVI TRENING</button></a><br><br>
 			<?php endif; ?>
 
 
-			<?php foreach ($training_article AS $ta): ?>
+			<?php foreach ($training_article as $ta): ?>
 				<training-listing>
 					<training-item>
 						<br>
@@ -88,13 +91,13 @@
 							</h2>
 							<p><?= $ta['price'] ?> RSD</p>
 
-							<?php if (auth_is_admin()): ?>
+							<?php if (auth_is_admin() && !isset($_GET['show_deleted'])): ?>
 								<div>
-						
-									<a href="<?= FILE_INDEX ?>?page=training&action=edit&id=<?= $ta['training_id'] ?>">IZMENI </a>
-									
-									<a href="<?= FILE_INDEX ?>?page=training&action=delete&id=<?= $ta['training_id'] ?>">| IZBRIŠI</a>
-								
+
+									<a href="<?= FILE_INDEX ?>?page=training&action=edit&id=<?= $ta['training_id'] ?>"><button>IZMENI</button> </a>
+
+									<a href="<?= FILE_INDEX ?>?page=training&action=delete&id=<?= $ta['training_id'] ?>"> <button>IZBRIŠI</button></a>
+
 								</div>
 							<?php endif; ?>
 							<input type="hidden" name="page" value="training">
@@ -106,7 +109,7 @@
 		</div>
 	</div>
 
-		
+
 
 	<div id="bmi-kalkulator">
 		<h3>IZRAČUNAJTE SVOJ BMI!</h3>
@@ -115,18 +118,17 @@
 			kvadratom visine u metrima. BMI je jeftina i laka metoda skrininga za telesnu masu - podhranjenost,
 			zdrava telesna masa, prekomerna težina i gojaznost.
 		</p>
-
-		<label for="visina">Visina (cm):</label>
-		<input type="number" id="visina" placeholder="173">
-
-		<label for="tezina">Težina (kg):</label>
-		<input type="number" id="tezina" placeholder="83">
-
-		<label for="pol">Pol:</label>
-		<input type="text" id="pol" placeholder="M/Ž">
-
-		<button id="izracunaj">IZRAČUNAJ</button>
-
+		<br>
+		<label for="visina">Visina (cm)</label><br>
+		<input type="number" id="visina">
+		<br>
+		<label for="tezina">Težina (kg)</label><br>
+		<input type="number" id="tezina">
+		<br>
+		<label for="pol">Pol (M/Ž)</label><br>
+		<input type="text" id="pol">
+		<br>
+		<button id="izracunaj">IZRAČUNAJTE</button>
 		<div id="rezultat"></div>
 	</div>
 </div>

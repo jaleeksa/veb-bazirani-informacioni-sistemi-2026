@@ -11,17 +11,19 @@
 
     <?php else: ?>
         <div class="banner">
-            <h1>PRIJAVI SE</h1>
+            <h1>PRIJAVA</h1>
         </div>  
 
 
         <div id="prijava-info">
             <form method="post">
-                <input type="text" name="username" placeholder="Korisničko ime">
+                <label>Korisničko ime</label><br>
+                <input type="text" name="username">
+                <br>
+                <label>Lozinka</label><br>
+                <input type="password" name="password">
                 <br><br>
-                <input type="password" name="password" placeholder="Lozinka">
-                <br><br>
-                <button>Pošalji</button>
+                <button>PRIJAVITE SE</button>
             </form>
         </div>
 
