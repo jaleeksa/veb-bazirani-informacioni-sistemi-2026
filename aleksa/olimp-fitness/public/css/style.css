@@ -583,3 +583,17 @@ textarea:focus {
     width: 50%;
     margin: 0 auto 40px;
 }
+
+#stats-container #tableSearch {
+    background-color: white;
+    padding: 1em 3em;
+    border: 1px solid #4ba05b;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    transition: 0.25s;
+}
+
+#stats-container #tableSearch:focus {
+    background-color: #d2fad9;
+}

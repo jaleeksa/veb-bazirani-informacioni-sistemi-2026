@@ -1,18 +1,31 @@
 <?php
 
 function db_connect() {
-	include_once(DIR_ROOT . 'config.php');
-	$db = mysqli_connect(
-		$_config['hostname'],
-		$_config['username'],
-		$_config['password'],
-		$_config['database']
-	);
-	if (mysqli_connect_errno()) {
-		echo "Failed to connect to MySQL: " . mysqli_connect_error();
-		exit();
-	}
-	return $db;
+    // Ako config nije učitan, učitaj ga
+    if (!isset($_config)) {
+        $config_path = dirname(__DIR__) . '/config.php';   // ide jedan nivo gore
+        if (file_exists($config_path)) {
+            include_once($config_path);
+        } else {
+            // Fallback za AJAX pozive
+            include_once('../config.php');
+        }
+    }
+
+    global $_config;
+
+    $db = mysqli_connect(
+        $_config['hostname'] ?? 'localhost',
+        $_config['username'] ?? 'root',
+        $_config['password'] ?? '',
+        $_config['database'] ?? 'olimp-fitness'
+    );
+
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        exit();
+    }
+    return $db;
 }
 
 function db_close($_db) {
