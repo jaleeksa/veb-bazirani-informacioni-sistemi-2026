@@ -80,7 +80,7 @@ else {
             $sql = "SELECT *
                     FROM `trainings`
                     WHERE `deleted_at` IS NULL
-                    ORDER BY training_id DESC";
+                    ORDER BY training_id ASC";
             
             $_output['show_deleted_mode'] = false;
         }

@@ -38,10 +38,8 @@ if ($_POST) {
 
     $stmtPie = mysqli_prepare($_db, $sqlPie);
 
-    $sqlTable = "SELECT 
-                    m.user_id,
+    $sqlTable = "SELECT   
                     u.username,
-                    m.training_id,
                     t.title,
                     t.price,
                     t.deleted_at,
@@ -78,13 +76,12 @@ if ($_POST) {
 
         while ($row = mysqli_fetch_assoc($resultTable)) {
             $tableData[] = [
-                'user_id' => $row['user_id'],
+                
                 'username' => $row['username'],
-                'training_id' => $row['training_id'],
                 'title' => $row['title'],
                 'price' => $row['price'],
                 'deleted_at' => $row['deleted_at'],
-                'start_date' => date('d-m-Y', strtotime($row['start_date']))
+                'start_date' => date('d-m-Y', strtotime($row['start_date'])),
             ];
         }
 
